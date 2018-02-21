@@ -14,11 +14,11 @@ import { PasswordEditComponent } from '../../business-shared/user/password-edit/
 })
 export class HomeComponent implements OnInit {
 
-  userTipClose: boolean = false;
-  isTodoCollapsed: boolean = false;
-  isNoticeCollapsed: boolean = false;
-  isNeedReadCollapsed: boolean = false;
-  isCommonFuncCollapsed: boolean = false;
+  userTipClose = false;
+  isTodoCollapsed = false;
+  isNoticeCollapsed = false;
+  isNeedReadCollapsed = false;
+  isCommonFuncCollapsed = false;
 
 
   todoObj: TodoObjData = {
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       submitUser: '马七',
       createDate: '2016-07-23'
     }]
-  }
+  };
 
   needReadObj: NeedReadObjData = {
     total: 50,
@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit {
       type: '待阅',
       createDate: '2016-07-20'
     }]
-  }
+  };
 
   noticeObj: NoticeObjData = {
     total: 60,
