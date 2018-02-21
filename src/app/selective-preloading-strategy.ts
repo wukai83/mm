@@ -1,12 +1,18 @@
-import { PreloadingStrategy, Route } from "@angular/router";
-import { Observable } from "rxjs";
+import { PreloadingStrategy, Route } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
 /**
- * 预加载策略
+ * 可選択のプリロード戦略
+ * @export
+ * @class SelectivePreloadingStrategy
+ * @implements {PreloadingStrategy}
  */
 export class SelectivePreloadingStrategy implements PreloadingStrategy {
-    preload(route: Route, load: Function): Observable<any> {
-        //默认进行加载，当配置了preload=false时不预加载
-        return route.data && route.data.preload===false ? Observable.of(null) : load() ;
+    preload(route: Route, load: () => Observable<any>): Observable<any> {
+        if (route.data && route.data['preload']) {
+            return load();
+        } else {
+            return Observable.of(null);
+        }
     }
-
 }

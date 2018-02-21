@@ -11,7 +11,7 @@ export class SessionStorageService {
     constructor() {
         if (!sessionStorage) {
             throw new Error('浏览器不支持本地存储！');
-        }else{
+        } else {
             this.sessionStorage = window.sessionStorage;
         }
     }

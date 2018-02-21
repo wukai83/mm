@@ -16,7 +16,7 @@ export class ToastService {
   getToasts(): Observable<ToastConfig> {
     return this.toastSubject;
   }
- 
+
 
   toast(toastConfig: ToastConfig) {
     this.toastSubject.next(toastConfig);

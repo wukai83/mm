@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {ToastConfig,ToastType} from './toast-model';
+import {ToastConfig, ToastType} from './toast-model';
 
 /**
  * toast组件
@@ -7,7 +7,7 @@ import {ToastConfig,ToastType} from './toast-model';
 @Component({
   selector: 'c-toast',
   templateUrl : './toast.component.html',
-  styleUrls:['./toast.component.scss']
+  styleUrls: ['./toast.component.scss']
  })
 export class ToastComponent implements OnInit {
 
@@ -16,7 +16,7 @@ export class ToastComponent implements OnInit {
   @Output() dismissed = new EventEmitter();
 
   constructor() {
-    
+
   }
 
   ngOnInit() {

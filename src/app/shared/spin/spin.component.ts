@@ -7,15 +7,15 @@ import { SpinService } from './spin.service';
 @Component({
     selector: 'c-spin',
     templateUrl: './spin.component.html',
-    styleUrls:['./spin.component.scss']
+    styleUrls: ['./spin.component.scss']
 })
 export class SpinComponent {
 
     //标识
-    showSpin: boolean = false;
+    showSpin = false;
 
     //数量
-    count: number = 0;
+    count = 0;
 
     constructor(private spinService: SpinService) {
         this.spinService.getSpin().forEach((showSpin: boolean) => {
